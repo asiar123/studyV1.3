@@ -1,0 +1,112 @@
+{% extends 'base/base.html' %}
+
+{% block Header %} {% endblock %}
+
+{% block Sidebar %} {% endblock %}
+
+{% block main %} {% endblock %}
+
+{% block study %} {% endblock %}
+
+{% block matery %}
+
+<main id="main" class="main">
+
+    <section class="section">
+        <div class="row align-items-top">
+            <div class="col-lg-7">
+
+
+                <!-- Card with header and footer -->
+                <div class="card">
+                    <div class="card-header">Biología</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Introducción</h5>
+                        La biología (del griego βίος [bíos] «vida», y -λογία [-logía] «tratado», «estudio» o
+                        «ciencia»)1​2​ es la ciencia natural que estudia todo lo relacionado con la vida y lo orgánico,
+                        incluyendo los procesos, sistemas, funciones, mecanismos u otros caracteres biológicos
+                        subyacentes a los seres vivos en diversos campos especializados que abarcan su morfología,
+                        fisiología, filogénesis, desarrollo, evolución, distribución e interacciones en los niveles
+                        macroscópico y microscópico.3​4
+                    </div>
+
+                    <!-- Card with an image on left -->
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="/static/assets/img/piedra.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Estado solido</h5>
+                                    <p class="card-text">La materia en estado sólido (o simplemente los sólidos) se
+                                        caracteriza por una disposición específica sus partículas, basada en nexos muy
+                                        rígidos y fuertes, lo cual se traduce en una estructura física muy bien
+                                        definida. Esto ocurre debido a las fuerzas de cohesión entre las partículas,
+                                        responsables de mantener la forma y el volumen del sólido estables, y de
+                                        otorgarle cierto margen de dureza y de resistencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End Card with an image on left -->
+
+
+                    <!-- Card with an image on top -->
+                    <div class="card">
+                        <img src="/static/assets/img/polos.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Sublimación</h5>
+                            <p class="card-text">De sólido a gas: sublimación. Este proceso ocurre cuando un sólido se
+                                transforma en un gas sin transformarse previamente en un líquido. Un ejemplo se ve en
+                                los polos del Planeta, donde la temperatura es tan baja que es imposible la formación de
+                                agua líquida, pero aun así el hielo y la nieve se subliman directo a la atmósfera.</p>
+                        </div>
+                    </div><!-- End Card with an image on top -->
+
+                    <div class="col-md-12">
+
+                        <!-- Card with an image on bottom -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Condensación</h5>
+                                <p class="card-text">De gas a líquido: condensación. Este proceso físico ocurre cuando un gas se transforma en un líquido al disminuir su temperatura (retirando calor). La vaporización es el proceso inverso de la condensación. Al sustraer energía, las partículas del gas se mueven más lento, lo que permite que puedan interactuar más y, por tanto, que sus fuerzas atractivas sean mayores. Esto es lo que ocurre en la atmósfera cuando, al alejarse de la superficie terrestre, el vapor de agua pierde temperatura y forma nubes que eventualmente precipitan en forma de gotas de agua mediante el fenómeno llamado lluvia.</p>
+                            </div>
+                            <img src="/static/assets/img/nubes.jpg" class="card-img-bottom" alt="...">
+                        </div><!-- End Card with an image on bottom -->
+
+                    </div>
+
+                    <div class="card-footer">
+
+                        <form method="post">
+
+                            {% csrf_token %}
+                            {{ form.as_p }}
+
+                            
+
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary " type="submit">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div><!-- End Card with header and footer -->
+
+
+
+            </div>
+
+        </div>
+    </section>
+
+</main><!-- End #main -->
+
+{% endblock %}
+
+{% block Footer %} {% endblock %}

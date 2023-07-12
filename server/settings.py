@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'home',
     'user',
     'matery',
-    'person'
+    'person',
+    'biology',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +83,14 @@ WSGI_APPLICATION = 'server.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'db2034',
+        'USER': 'postgres',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': 5432
+    }
 }
 
 # Password validation

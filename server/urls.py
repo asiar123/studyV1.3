@@ -21,6 +21,7 @@ from django.conf import settings
 from django.contrib.auth.views import logout_then_login
 from user.views import Login
 from matery.views import añadirMateria
+from biology.views import añadirBiology
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +31,5 @@ urlpatterns = [
     url(r'^logout/', logout_then_login, name='logout'),
     path('math/',añadirMateria.as_view(), name="matery"),
     url(r'^person/', include ('person.urls')),
+    path('biology/',añadirBiology.as_view(), name="biology"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

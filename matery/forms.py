@@ -9,17 +9,15 @@ class FormMatery(forms.ModelForm):
 
 		fields = [
 			'user',
-			'Nombre',
-			'Orientacion1',
-			'Orientacion2',
-			'Orientacion3',
-			'Orientacion4',
-			'Orientacion5',
+			'Matematicas1',
+			'Matematicas2',
+			'Matematicas3',
+			'Matematicas4',
+			'Matematicas5',
 			
 		]
 		labels = {
 			'user': 'Seleccione su usuario',
-			'Nombre': 'Nombre de la materia',
 			'Matematicas1': '¿Que son los números naturales?',
 			'Matematicas2': '¿Que son los números enteros?',
 			'Matematicas3': '√432',
@@ -28,10 +26,9 @@ class FormMatery(forms.ModelForm):
 			
 		}
 		widgets = {
-			'Nombbre': forms.TextInput(attrs={'class':'form-control'}),
-			'Orientacion1': forms.TextInput(attrs={'class':'form-control'}),
-			'Orientacion2': forms.TextInput(attrs={'class':'form-control'}),
-			'Orientacion3': forms.TextInput(attrs={'class':'form-control'}),
-			'Orientacion4': forms.TextInput(attrs={'class':'form-control'}),
-			'Orientacion5': forms.TextInput(attrs={'class':'form-control'}),
+			'Matematicas1': forms.TextInput(attrs={'class':'form-control'}),
+			'Matematicas2': forms.TextInput(attrs={'class':'form-control'}),
+			'Matematicas3': forms.TextInput(attrs={'class':'form-control'}),
+			'Matematicas4': forms.TextInput(attrs={'class':'form-control'}),
+			'Matematicas5': forms.TextInput(attrs={'class':'form-control'}),
 		}
